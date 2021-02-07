@@ -1,0 +1,16 @@
+void setup() {
+  pinMode(A5,INPUT);
+  pinMode(3,OUTPUT);
+}
+
+void loop() {
+  int i = analogRead(A5);
+  if(i<440)
+  {
+    analogWrite(3, 220-i/2);
+  }
+  else
+  {
+    analogWrite(3,0);
+  }
+}
